@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>YumBox</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' defer></script>
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <header>
+	     <h1>YumBox</h1>
+    </header>
+    <main>
+<!--Start Screen  -->
+      <div class="start" id="start">
+        <h2>A recipe box app.</h2>
+        <button class="button" id="startbt" value=".myRecipes">Get Started</button>
+      </div>
+<!-- Enter new -->
+      <div class="new hide">
+        <h2>Name your new list</h2>
+          <input id="nameInput" placeholder="" autofocus="autofocus">
+          <button class="button" id="ok_bt" onclick="setUpList();changePage('.myList')">OK</button>
+      </div>
+<!-- My Recipes - Main Screen-->
+      <div class="myRecipes hide">
+        <h2 id="listNameHere">My YumBox</h2>
+        <div>
+          <button class="button" onclick="alert('Not available yet')">Search</button>
+          <button class="button" onclick="alert('Not available yet')" id="addRecipe">Add Recipe</button>
+          <button class="button" onclick="alert('Not available yet')">Make Grocery List</button>
+        </div>
+        <section class="content">
+          <div id="filters">Filters go here.
+          </div>
+          <ul id="listItems"> <!-- use JS to populate this list -->
+            <p>You have no recipes yet!  Click 'Add Recipe' to get started.</p>
+          </ul>
+        </section>
+      </div>
+<!-- Display Recipe Screen -->
+      <div class="displayRecipe hide">
+        <h2 id="display_recipe_name">Recipe Name</h2>
+        <p id="display_details"></p>
+        <h3>Ingredients:</h3>
+        <p id="display_ingredients">Ingredients</p>
+        <h3>Ingredients:</h3>
+        <p id="display_instructions">Instructions</p>
+        <button class="back button" id="back_to_menu">Back</button>
+        <button class="button" onclick="alert('Not available yet')">Edit</button>
+      </div>
+    </main>
+  </body>
+</html>
